@@ -1,3 +1,16 @@
+--query A1
+SELECT SUM(Quantity*UnitPrice)
+FROM sale table;
+
+--query A2
+SELECT COUNT ( DISTINCT customer) AS "Number of customer"
+FROM sale table
+;
+
+--query A3
+SELECT product, SUM(quantity)
+FROM sale table
+GROUP BY product;
 
 --query A4
 SELECT customer, count(product),count(quantity),SUM(unit price)
@@ -23,10 +36,13 @@ CREAT TABLE chart ( id   int,
             manager  varchar(20),
             manager id   int,
             PRIMARY KEY (id),
-            FOREIGN KEY (manager id) REFRENCE chart)
+            FOREIGN KEY (manager id) REFRENCE chart(id));
 
 
 --query B2
+
+
+
 
 
 
